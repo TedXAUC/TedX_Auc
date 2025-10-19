@@ -92,10 +92,12 @@ const Donate = () => {
 
     try {
       // 1. Initiate payment with the backend to get a transaction ID
-      const response = await axios.post(
+     const response = await axios.post(
   `${import.meta.env.VITE_API_BASE_URL}/api/payment/initiate`,
-        amount: finalAmount,
-      });
+  { // <-- You were missing this opening brace
+    amount: finalAmount,
+  } // <-- You were missing this closing brace
+);
 
       if (!response.data.success) {
         throw new Error(response.data.message || "Payment initiation failed.");
