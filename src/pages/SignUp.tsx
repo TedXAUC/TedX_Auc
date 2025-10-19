@@ -38,7 +38,7 @@ const SignUp = () => {
       // You may need to manually update the public.profiles table in Supabase
       // for the new user after signup to set the initial full_name.
       toast.success("Registration successful! Please check your email to confirm your account.");
-      navigate("/"); // Redirect to home page after sign up
+       // Redirect to home page after sign up
     } catch (error: any) {
       toast.error(error.message);
     } finally {
