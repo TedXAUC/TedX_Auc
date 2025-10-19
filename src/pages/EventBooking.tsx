@@ -200,7 +200,7 @@ const EventBooking = () => {
        const response = await axios.post(
   `${import.meta.env.VITE_API_BASE_URL}/api/payment/initiate`,
   { // <-- You were missing this opening brace
-    amount: finalAmount,
+    amount: totalAmount,
   } // <-- You were missing this closing brace
 );
 
