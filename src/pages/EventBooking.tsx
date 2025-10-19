@@ -197,7 +197,8 @@ const EventBooking = () => {
       const toastId = toast.loading("Connecting to payment gateway...");
 
       try {
-        const response = await axios.post('http://localhost:3001/api/payment/initiate', {
+        const response = await axios.post(
+  `${import.meta.env.VITE_API_BASE_URL}/api/payment/initiate`, {
           amount: totalAmount,
         });
 
