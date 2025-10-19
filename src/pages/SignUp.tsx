@@ -26,8 +26,12 @@ const SignUp = () => {
       const { error } = await supabase.auth.signUp({
         email,
         password,
-        // Removed: options: { data: { full_name: fullName } }
-      });
+        options: { // <-- ADD THIS OBJECT
+      data: { // <-- ADD THIS OBJECT
+        full_name: fullName, // <-- PASS THE FULL NAME HERE
+      },
+    },
+  });
 
       if (error) throw error;
 
