@@ -69,7 +69,8 @@ const PaymentStatus = () => {
 
                 // 2. Check payment status
                 setMessage("Checking payment status with gateway...");
-                const response = await axios.get(`http://localhost:3001/api/payment/status/${merchantTransactionId}`);
+                // NEW CODE (Correct - uses the VITE_API_BASE_URL environment variable)
+const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/payment/status/${merchantTransactionId}`);
 
                 if (response.data.success && response.data.code === 'PAYMENT_SUCCESS') {
                     const paymentData = response.data.data;
