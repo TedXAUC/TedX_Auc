@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Bars3Icon, XMarkIcon, UserCircleIcon } from "@heroicons/react/24/outline";
-const TEDX_LOGO_URL = 'https://lehpiptexuxbnxgdunmc.supabase.co/storage/v1/object/public/assets/tedxauc-logo-new.png';
+import tedxLogo from '@/assets/tedxauc-logo-new.png';
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetClose } from "@/components/ui/sheet"; 
