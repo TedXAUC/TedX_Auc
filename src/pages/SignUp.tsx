@@ -20,14 +20,17 @@ const SignUp = () => {
       return;
     }
     setIsSubmitting(true);
-    try {
-      // The full_name data is no longer sent here, the database trigger will handle 
-      // the profile creation using the user's ID and email.
-      const { error } = await supabase.auth.signUp({
-  email,
-  password,
-  // Note: The 'fullName' state is now unused here, but kept for future profile updates.
-});
+   try {
+  // RESTORE THE OPTIONS BLOCK TO SEND FULL NAME
+  const { error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: { // <-- ADD THIS OBJECT
+      data: {
+        full_name: fullName, // <-- Send the full name here
+      },
+    },
+  });
 
       if (error) throw error;
 
