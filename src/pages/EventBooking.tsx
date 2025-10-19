@@ -197,10 +197,12 @@ const EventBooking = () => {
       const toastId = toast.loading("Connecting to payment gateway...");
 
       try {
-        const response = await axios.post(
-  `${import.meta.env.VITE_API_BASE_URL}/api/payment/initiate`, {
-          amount: totalAmount,
-        });
+       const response = await axios.post(
+  `${import.meta.env.VITE_API_BASE_URL}/api/payment/initiate`,
+  { // <-- You were missing this opening brace
+    amount: finalAmount,
+  } // <-- You were missing this closing brace
+);
 
         if (!response.data.success) {
           throw new Error(response.data.message || "Payment initiation failed.");
