@@ -8,8 +8,10 @@ const uniqid = require('uniqid');
 const app = express();
 app.use(express.json());
 
+// In server/index.js, find the cors block:
 app.use(cors({
-  origin: ['http://localhost:8080', 'https://ted-x-auc.vercel.app']
+  // *** MAKE SURE YOU USE SQUARE BRACKETS [ ] AND COMMAS, OR IT WILL FAIL ***
+  origin: ['http://localhost:8080', 'https://ted-x-auc.vercel.app'], 
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'X-VERIFY']
 }));
