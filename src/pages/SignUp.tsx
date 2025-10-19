@@ -24,14 +24,10 @@ const SignUp = () => {
       // The full_name data is no longer sent here, the database trigger will handle 
       // the profile creation using the user's ID and email.
       const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: { // <-- ADD THIS OBJECT
-      data: { // <-- ADD THIS OBJECT
-        full_name: fullName, // <-- PASS THE FULL NAME HERE
-      },
-    },
-  });
+  email,
+  password,
+  // Note: The 'fullName' state is now unused here, but kept for future profile updates.
+});
 
       if (error) throw error;
 
