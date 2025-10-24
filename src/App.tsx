@@ -21,6 +21,9 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile"; // Import Profile
 import ResetPassword from "./pages/ResetPassword"; // Import ResetPassword
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Refund from "./pages/Refund";
 
 const queryClient = new QueryClient();
 
@@ -46,10 +49,11 @@ const App = () => (
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
-              
-              {/* --- ADD THESE NEW ROUTES --- */}
               <Route path="/profile" element={<Profile />} />
               <Route path="/reset-password" element={<ResetPassword />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/refund-policy" element={<Refund />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>
