@@ -10,7 +10,7 @@ const Refund: FC = () => {
               Refund <span className="gradient-text">Policy</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed text-center">
-              Last Updated: [Date]
+              Last Updated: 24th Oct 2025
             </p>
 
             <h2>1. General Policy</h2>
