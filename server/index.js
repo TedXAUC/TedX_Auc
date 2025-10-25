@@ -10,8 +10,11 @@ app.use(express.json());
 
 // In server/index.js, find the cors block:
 app.use(cors({
-  // *** MAKE SURE YOU USE SQUARE BRACKETS [ ] AND COMMAS, OR IT WILL FAIL ***
-  origin: ['http://localhost:8080', 'https://ted-x-auc.vercel.app'], 
+  origin: [
+    'http://localhost:8080',
+    'https://ted-x-auc.vercel.app',
+    'https://www.tedxamity.com' 
+  ],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'X-VERIFY']
 }));
