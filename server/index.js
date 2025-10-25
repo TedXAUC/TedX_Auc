@@ -13,7 +13,8 @@ app.use(cors({
   origin: [
     'http://localhost:8080',
     'https://ted-x-auc.vercel.app',
-    'https://www.tedxamity.com' 
+    'https://www.tedxamity.com', // MUST HAVE this one
+    'https://tedxamity.com'      // Recommended to add this too
   ],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'X-VERIFY']
