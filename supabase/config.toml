@@ -1,0 +1,12 @@
+project_id = "lehpiptexuxbnxgdunmc"
+
+[functions.send-booking-email]
+enabled = true
+verify_jwt = true
+import_map = "./functions/send-booking-email/deno.json"
+entrypoint = "./functions/send-booking-email/index.ts"
+
+[functions.send-booking-email-secure]
+verify_jwt = false
+# --- Add this line ---
+import_map = "./functions/send-booking-email-secure/deno.json"
