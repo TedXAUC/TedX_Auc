@@ -1,29 +1,57 @@
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, CalendarDaysIcon, ClockIcon, LightBulbIcon, SparklesIcon, UsersIcon, MicrophoneIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline"; // Added MicrophoneIcon, QuestionMarkCircleIcon
+import { ArrowRightIcon, CalendarDaysIcon, ClockIcon, LightBulbIcon, SparklesIcon, UsersIcon } from "@heroicons/react/24/outline"; // Added/adjusted icons
 import { Button } from "@/components/ui/button";
-// Tooltip imports are commented out as they are not used in the new section
-// import {
-//   Tooltip,
-//   TooltipContent,
-//   TooltipProvider,
-//   TooltipTrigger,
-// } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-// Speaker images are commented out
-// import majorImg from "@/assets/major.jpeg";
-// import nilimaImg from "@/assets/nilima-roy.jpeg";
-// import ruchiImg from "@/assets/ruchi.jpeg";
-// import duggalImg from "@/assets/s-duggal.jpg";
-import tedxBrandImg from "@/assets/tedx-brand.png"; // Keep this import
+// Assume images are placed in src/assets
+import majorImg from "@/assets/major.jpeg";
+import nilimaImg from "@/assets/nilima-roy.jpeg";
+import ruchiImg from "@/assets/ruchi.jpeg";
+import duggalImg from "@/assets/s-duggal.jpg";
+import tedxBrandImg from "@/assets/tedx-brand.png"; // Import the brand image
 
-// Speaker data is commented out
-// const upcomingEventSpeakers = [ ... ];
+// Speaker data remains the same
+const upcomingEventSpeakers = [
+  {
+    name: "Major General Rajpal Punia (Retd.)",
+    role: "Guest of Honour",
+    profession: "War Veteran & Author",
+    bio: "Led India's Counter-Terror Operations in J&K, Gallantry Awardee (KSM), and a renowned author and motivator.",
+    image: majorImg,
+  },
+  {
+    name: "Dr. Nilima Roy Chowdhury",
+    role: "Speaker",
+    profession: "FaithTech Startup Founder",
+    bio: "3x TEDx & Josh Talks Speaker, Mentor at WEP, NITI Aayog, and a Corporate Wellness Coach.",
+    image: nilimaImg,
+  },
+  {
+    name: "Ruchi Gour Mehta",
+    role: "Speaker",
+    profession: "Finance Leader",
+    bio: "Formerly with ITC, Amazon, Myntra, Swiggy & Dream Sports, specializing in business finance and governance.",
+    image: ruchiImg,
+  },
+  {
+    name: "Saakshar Duggal",
+    role: "Speaker",
+    profession: "AI Governance & Law Expert",
+    bio: "22x TEDx Speaker, Cybercrime Lawyer, Forbes Council Member, and a United Nations Contributor.",
+    image: duggalImg,
+  },
+];
 
 
 const Index = () => {
   return (
     <div className="overflow-hidden">
-      {/* --- SECTION 1: Hero Section (Unchanged) --- */}
+      {/* --- SECTION 1: Hero Section --- */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5">
          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
 
@@ -55,65 +83,81 @@ const Index = () => {
       {/* --- END Hero Section --- */}
 
 
-      {/* --- SECTION 2: Speakers Coming Soon - More Appealing Placeholder --- */}
+      {/* --- SECTION 2: Explore Our Upcoming Event --- */}
       <section className="section-padding bg-card/30 border-y border-border/50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <div className="animate-fade-in">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold mb-4">
-              Meet Our Inspiring <span className="gradient-text">Speakers</span>
+              Explore Our Upcoming <span className="gradient-text">Event</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-16 max-w-2xl mx-auto">
-              Four unique voices, four powerful ideas. Prepare to be inspired. The reveal is just around the corner!
+            <p className="text-2xl font-semibold text-foreground mb-2">
+              Beyond Boundaries
             </p>
-
-            {/* Placeholder Visual with 4 Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {[...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="group relative aspect-[3/4] rounded-lg overflow-hidden card-glow border border-border/30 animate-fade-in hover:scale-105 hover:shadow-primary/20 transition-all duration-300"
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
-                  {/* Subtle Background Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-background via-card/50 to-primary/10 opacity-60 group-hover:opacity-80 transition-opacity"></div>
-
-                  {/* Question Mark Icon */}
-                  <div className="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
-                    <QuestionMarkCircleIcon className="h-16 w-16 text-primary/50 group-hover:text-primary transition-colors duration-300 mb-4 opacity-50 group-hover:opacity-80 group-hover:scale-110" />
-                    <h3 className="text-lg font-semibold text-foreground/80 group-hover:text-foreground transition-colors">Speaker {index + 1}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Reveal Coming Soon</p>
-                  </div>
-
-                  {/* Animated Glow Effect on Hover */}
-                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-primary/50 transition-all duration-300 scale-95 group-hover:scale-100 opacity-0 group-hover:opacity-100 animate-pulse group-hover:animate-none"></div>
+            <div className="flex items-center justify-center gap-4 text-muted-foreground">
+                <div className="flex items-center gap-1">
+                    <CalendarDaysIcon className="h-5 w-5"/>
+                    <span>12th Nov</span>
                 </div>
+                <div className="flex items-center gap-1">
+                    <ClockIcon className="h-5 w-5"/>
+                    <span>10:30 AM onwards</span>
+                </div>
+            </div>
+          </div>
+
+          <TooltipProvider delayDuration={100}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+              {upcomingEventSpeakers.map((speaker, index) => (
+                <Tooltip key={speaker.name}>
+                  <TooltipTrigger asChild>
+                    <div
+                      className="group flex flex-col items-center text-center cursor-default animate-fade-in"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <div className="relative w-40 h-40 mb-4">
+                        <img
+                          src={speaker.image}
+                          alt={speaker.name}
+                          className="w-full h-full object-cover rounded-full border-4 border-primary/20 group-hover:border-primary transition-all duration-300 group-hover:scale-105"
+                        />
+                         <span className="absolute bottom-1 right-1 bg-primary text-primary-foreground text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md leading-tight">
+                          {speaker.role}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-bold text-foreground mb-1 group-hover:gradient-text transition-colors">
+                        {speaker.name}
+                      </h3>
+                      <p className="text-sm text-primary font-medium">
+                        {speaker.profession}
+                      </p>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    align="center"
+                    className="max-w-xs text-center p-3 bg-popover text-popover-foreground border border-border shadow-lg rounded-md"
+                  >
+                    <p className="text-sm">{speaker.bio}</p>
+                  </TooltipContent>
+                </Tooltip>
               ))}
             </div>
+          </TooltipProvider>
 
-             <div className="mt-16">
-               <Link to="/speakers">
-                 <Button variant="outline" className="border-primary/30 hover:border-primary hover:bg-primary/10 group">
-                   Stay Updated for the Reveal
-                   <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                 </Button>
-              </Link>
-             </div>
-          </div>
+           <div className="text-center mt-16">
+             <Link to="/events">
+               <Button variant="outline" className="border-primary/30 hover:border-primary hover:bg-primary/10 group">
+                 Learn More & Book Tickets
+                 <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+               </Button>
+             </Link>
+           </div>
         </div>
       </section>
-      {/* --- END Speakers Coming Soon --- */}
+      {/* --- END Upcoming Event SECTION --- */}
 
 
-      {/* --- ORIGINAL SECTION 2 (Commented Out) --- */}
-      {/*
-      <section className="section-padding bg-card/30 border-y border-border/50">
-        ... original speaker section code ...
-      </section>
-      */}
-      {/* --- END Original Upcoming Event SECTION --- */}
-
-
-      {/* --- SECTION 3: What is TEDxAUC? (Unchanged) --- */}
+      {/* --- SECTION 3: What is TEDxAUC? --- */}
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -154,7 +198,7 @@ const Index = () => {
       {/* --- END What is TEDxAUC? --- */}
 
 
-      {/* --- SECTION 4: Join the Movement (Unchanged) --- */}
+      {/* --- SECTION 4: Join the Movement (Combined Mission & CTA) --- */}
        <section className="section-padding bg-gradient-to-r from-primary/10 to-primary/5 border-y border-primary/20">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8 animate-fade-in">
            <div className="w-16 h-16 bg-card border border-border rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
