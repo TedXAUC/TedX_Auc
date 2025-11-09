@@ -84,10 +84,8 @@ const Terms: FC = () => {
             </p>
             {/* --- END ENHANCED SECTION --- */}
 
-            <h2>5. Intellectual Property</h2>
-            <p>All content, including talks, videos, and materials, are the intellectual property of TEDxAUC and TED. Unauthorized reproduction or distribution is strictly prohibited.</p>
-
-            <h2>6. Limitation of Liability</h2>
+            
+            <h2>5. Limitation of Liability</h2>
             <p>TEDxAUC is not liable for any personal injury, loss, or damage to personal property during the event. Attendees are responsible for their own belongings.</p>
           </div>
         </div>
