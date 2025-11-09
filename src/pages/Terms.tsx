@@ -6,8 +6,9 @@ const Terms: FC = () => {
     <div className="pt-24">
       <section className="section-padding bg-gradient-to-br from-background to-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* This `prose` class automatically styles all the tags below (h2, h3, p, ul) 
-            to add the correct spacing, line breaks, and styling on the website.
+          {/* This `prose` class automatically styles all the tags below.
+            We are adding `space-y-4` to the `ul` tags for spacing.
+            We are adding `className="text-primary"` to `strong` tags for red color.
           */}
           <div className="mx-auto max-w-4xl animate-fade-in prose prose-invert">
 
@@ -33,12 +34,13 @@ const Terms: FC = () => {
             <p>
               For the safety and security of all attendees, you must present a valid photo ID at the check-in counter to receive your event pass. This is a strict requirement.
             </p>
-            <ul>
+            {/* --- ADDED space-y-4 for list item spacing --- */}
+            <ul className="space-y-4">
               <li>
-                <strong>Amity University Chhattisgarh Students:</strong> You must present your valid Amity University Student ID Card AND your Aadhar Card (or other government-issued photo ID).
+                <strong className="text-primary">Amity University Chhattisgarh Students:</strong> You must present your valid Amity University Student ID Card <strong className="text-primary">AND</strong> your Aadhar Card (or other government-issued photo ID).
               </li>
               <li>
-                <strong>Guests & External Attendees:</strong> You must present your Aadhar Card or another valid government-issued photo ID (e.g., Driver's License, Passport).
+                <strong className="text-primary">Guests & External Attendees:</strong> You must present your Aadhar Card or another valid government-issued photo ID (e.g., Driver's License, Passport).
               </li>
             </ul>
             <p>
@@ -54,40 +56,41 @@ const Terms: FC = () => {
             </p>
 
             <h3>Do:</h3>
-            <ul>
+            {/* --- ADDED space-y-4 for list item spacing --- */}
+            <ul className="space-y-4">
               <li>
-                <strong>Be Respectful:</strong> Treat all fellow attendees, speakers, and event staff with courtesy. Harassment, discrimination, or disruptive behavior will not be tolerated.
+                <strong className="text-primary">Be Respectful:</strong> Treat all fellow attendees, speakers, and event staff with courtesy. Harassment, discrimination, or disruptive behavior will not be tolerated.
               </li>
               <li>
-                <strong>Be Punctual:</strong> Arrive on time for check-in and for the talks. Auditorium doors may be closed during sessions to avoid disturbances.
+                <strong className="text-primary">Be Punctual:</strong> Arrive on time for check-in and for the talks. Auditorium doors may be closed during sessions to avoid disturbances.
               </li>
               <li>
-                <strong>Silence Devices:</strong> Please ensure all mobile phones and other electronic devices are switched to silent mode inside the auditorium.
+                <strong className="text-primary">Silence Devices:</strong> Please ensure all mobile phones and other electronic devices are switched to silent mode inside the auditorium.
               </li>
               <li>
-                <strong>Engage & Connect:</strong> We encourage you to network with other attendees and engage in constructive discussions during breaks.
+                <strong className="text-primary">Engage & Connect:</strong> We encourage you to network with other attendees and engage in constructive discussions during breaks.
               </li>
               <li>
-                <strong>Join the Group:</strong> All confirmed attendees will be added to an official communication group (e.g., WhatsApp) for real-time updates. If you have purchased a ticket and are not in this group 24 hours before the event, please contact us at <strong>8926265583</strong> or via our <Link to="/contact" className="text-primary hover:underline">Contact Page</Link>.
+                <strong className="text-primary">Join the Group:</strong> All confirmed attendees will be added to an official communication group (e.g., WhatsApp) for real-time updates. If you have purchased a ticket and are not in this group 24 hours before the event, please contact us at <strong className="text-primary">8926265583</strong> or via our <Link to="/contact" className="text-primary hover:underline">Contact Page</Link>.
               </li>
             </ul>
 
-            {/* --- ADDED MARGIN-TOP (mt-6) HERE FOR SPACING --- */}
             <h3 className="mt-6">Don't:</h3>
-            <ul>
+            {/* --- ADDED space-y-4 for list item spacing --- */}
+            <ul className="space-y-4">
               <li>
-                <strong>No Food or Beverages:</strong> To maintain venue cleanliness, food and beverages are <strong>strictly prohibited</strong> inside the main auditorium. You may consume refreshments in designated break areas only.
+                <strong className="text-primary">No Food or Beverages:</strong> To maintain venue cleanliness, food and beverages are <strong className="text-primary">strictly prohibited</strong> inside the main auditorium. You may consume refreshments in designated break areas only.
               </li>
               <li>
-                <strong>No Smoking:</strong> The event venue is a strict no-smoking and no-vaping area, including all indoor and outdoor campus spaces.
+                <strong className="text-primary">No Smoking:</strong> The event venue is a strict no-smoking and no-vaping area, including all indoor and outdoor campus spaces.
               </li>
               <li>
-                <strong>No Disruptions:</strong> Avoid talking loudly, blocking aisles, or any other behavior that could disrupt the talks or the experience of other attendees.
+                <strong className="text-primary">No Disruptions:</strong> Avoid talking loudly, blocking aisles, or any other behavior that could disrupt the talks or the experience of other attendees.
               </li>
             </ul>
             
             <p>
-              <strong>Consequences:</strong> Failure to comply with these rules (especially regarding food/drink or disruptive behavior) may result in you being asked to leave the venue by event staff or security. TEDxAUC reserves the right to remove any individual without refund.
+              <strong className="text-primary">Consequences:</strong> Failure to comply with these rules (especially regarding food/drink or disruptive behavior) may result in you being asked to leave the venue by event staff or security. TEDxAUC reserves the right to remove any individual without refund.
             </p>
             {/* --- END ENHANCED SECTION --- */}
 
