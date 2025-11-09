@@ -16,7 +16,7 @@ const Terms: FC = () => {
               Terms & <span className="gradient-text">Conditions</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed text-center">
-              Last Updated: 24th Oct 2025
+              Last Updated: 9th Nov 2025
             </p>
 
             <h2>1. Introduction</h2>
