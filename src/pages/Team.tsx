@@ -185,7 +185,7 @@ const Team = () => {
             of spreading ideas worth sharing.
           </p>
           <a
-            href="mailto:team@tedxauc.org" // Make sure this email is correct
+            href="mailto:tedxamityraipur@gmail.com" // Make sure this email is correct
             className="hero-button inline-flex items-center"
           >
             Get in Touch
