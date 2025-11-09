@@ -6,26 +6,32 @@ const Terms: FC = () => {
     <div className="pt-24">
       <section className="section-padding bg-gradient-to-br from-background to-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* This `prose` class automatically styles all the h2, h3, p, and ul tags below for perfect spacing */}
+          {/* This `prose` class automatically styles all the h2, h3, p, and ul tags below
+            to add the correct spacing, line breaks, and styling on the website.
+          */}
           <div className="mx-auto max-w-4xl animate-fade-in prose prose-invert">
 
             <h1 className="text-5xl font-bold mb-8 text-center">
               Terms & <span className="gradient-text">Conditions</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed text-center">
-              Last Updated: 9th NOV 2025
+              Last Updated: 24th Oct 2025
             </p>
 
             <h2>1. Introduction</h2>
-            <p>Welcome to TEDxAUC. These Terms and Conditions govern your use of our website and services, including ticket purchases for our events. By accessing our website or purchasing tickets, you agree to be bound by these terms.</p>
+            <p>
+              Welcome to TEDxAUC. These Terms and Conditions govern your use of our website and services, including ticket purchases for our events. By accessing our website or purchasing tickets, you agree to be bound by these terms.
+            </p>
 
             <h2>2. Ticket Purchases</h2>
-            <p>All ticket sales are final and non-transferable. Please review our Refund Policy for details on exceptional circumstances.</p>
+            <p>
+              All ticket sales are final and non-transferable. Please review our Refund Policy for details on exceptional circumstances.
+            </p>
 
             {/* --- NEW SECTION FOR ID REQUIREMENTS --- */}
             <h2>3. Event Access & Security Requirements</h2>
             <p>
-              For the safety and security of all attendees, you must present a valid photo ID at the check-in counter to receive your event pass.
+              For the safety and security of all attendees, you must present a valid photo ID at the check-in counter to receive your event pass. This is a strict requirement.
             </p>
             <ul>
               <li>
@@ -36,7 +42,7 @@ const Terms: FC = () => {
               </li>
             </ul>
             <p>
-              Entry may be denied if you fail to provide the required identification.
+              Entry will be denied if you fail to provide the required identification. No refunds will be issued for failure to comply with this policy.
             </p>
             {/* --- END NEW SECTION --- */}
 
@@ -72,10 +78,10 @@ const Terms: FC = () => {
                 <strong>No Food or Beverages:</strong> To maintain venue cleanliness, food and beverages are <strong>strictly prohibited</strong> inside the main auditorium. You may consume refreshments in designated break areas only.
               </li>
               <li>
-                <strong>No Unauthorized Recording:</strong> While you are welcome to take photos, the unauthorized video or audio recording of talks is strictly prohibited, as per TED guidelines.
+                <strong>No Smoking:</strong> The event venue is a strict no-smoking and no-vaping area, including all indoor and outdoor campus spaces.
               </li>
               <li>
-                <strong>No Smoking:</strong> The event venue is a strict no-smoking and no-vaping area, including all indoor and outdoor campus spaces.
+                <strong>No Disruptions:</strong> Avoid talking loudly, blocking aisles, or any other behavior that could disrupt the talks or the experience of other attendees.
               </li>
             </ul>
             
@@ -84,9 +90,15 @@ const Terms: FC = () => {
             </p>
             {/* --- END ENHANCED SECTION --- */}
 
-            
-            <h2>5. Limitation of Liability</h2>
-            <p>TEDxAUC is not liable for any personal injury, loss, or damage to personal property during the event. Attendees are responsible for their own belongings.</p>
+            <h2>5. Intellectual Property</h2>
+            <p>
+              All content, including talks, videos, and materials, are the intellectual property of TEDxAUC and TED. Unauthorized reproduction or distribution is strictly prohibited.
+            </p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>
+              TEDxAUC is not liable for any personal injury, loss, or damage to personal property during the event. Attendees are responsible for their own belongings.
+            </p>
           </div>
         </div>
       </section>
