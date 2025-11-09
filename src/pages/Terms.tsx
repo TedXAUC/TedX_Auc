@@ -6,7 +6,7 @@ const Terms: FC = () => {
     <div className="pt-24">
       <section className="section-padding bg-gradient-to-br from-background to-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* This `prose` class automatically styles all the h2, h3, p, and ul tags below
+          {/* This `prose` class automatically styles all the tags below (h2, h3, p, ul) 
             to add the correct spacing, line breaks, and styling on the website.
           */}
           <div className="mx-auto max-w-4xl animate-fade-in prose prose-invert">
@@ -72,7 +72,8 @@ const Terms: FC = () => {
               </li>
             </ul>
 
-            <h3>Don't:</h3>
+            {/* --- ADDED MARGIN-TOP (mt-6) HERE FOR SPACING --- */}
+            <h3 className="mt-6">Don't:</h3>
             <ul>
               <li>
                 <strong>No Food or Beverages:</strong> To maintain venue cleanliness, food and beverages are <strong>strictly prohibited</strong> inside the main auditorium. You may consume refreshments in designated break areas only.
