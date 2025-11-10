@@ -4,10 +4,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { Tables } from "@/integrations/supabase/types"; // Assuming types are updated
 import { toast } from "sonner";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Button } from "@/components/ui/button"; // Added Button import
-import { Link } from "react-router-dom"; // Added Link import
+import { Button } from "@/components/ui/button"; 
+import { Link } from "react-router-dom"; 
 
-// Define the Team Member interface based on your Supabase table
+
 interface TeamMemberData extends Tables<"team_members"> {}
 
 // Define the structure for grouped team data
@@ -15,17 +15,19 @@ interface GroupedTeamData {
   [department: string]: TeamMemberData[];
 }
 
-// Define the desired order of departments
-// Define the desired order of departments
+
 const departmentOrder = [
-  "Leadership", // Assuming President/VP are here
+  "Chief-Patron",
+  "Patron",
+  "Associate-Patron",
+  "Leadership", // top
   "Logistics & Operation",
   "Finance",
   "Production",
   "Communication",
   "Curation",
   "Hospitality",
-  // Add any other departments here, they will appear last alphabetically
+  // other departments here,  will appear alphabetically
 ];
 
 
