@@ -305,7 +305,7 @@ const Speakers = () => {
                     id="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your idea worth spreading..."
+                    placeholder="Tell us about your idea worth spreading[ALONG WITH YOUR CONTACT DETAILS]..."
                     className="min-h-[120px]"
                     required
                   />
