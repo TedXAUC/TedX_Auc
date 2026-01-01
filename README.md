@@ -7,7 +7,7 @@ Upcoming Tasks
 The following critical features are next in the development pipeline:
 </p>
 <ul style="color: #fca5a5; list-style-type: disc; margin-left: 1.5rem;">
-<li><strong style="color: white;">Fix site icon and database price arrangement and domain redirection  </strong></li>
-<li><strong style="color: white;">Real Cred देना है for Gateway (Integrate Production Credentials for the Payment Gateway).</strong></li>
+<li><strong style="color: white;">Fixed site icon and database price arrangement and domain redirection  </strong></li>
+<li><strong style="color: white;"> GAveReal Cred for Gateway (Integrate Production Credentials for the Payment Gateway).</strong></li>
 </ul>
 </div>
