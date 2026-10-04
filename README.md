@@ -11,6 +11,8 @@ Featuring real-time auditorium seat reservations, cryptographic payment reconcil
 [![Volume Processed](https://img.shields.io/badge/Volume_Processed-₹40%2C000%2B-00C853?style=for-the-badge&logo=cashapp&logoColor=white)](https://ted-x-auc.vercel.app)
 [![Payment Reliability](https://img.shields.io/badge/Payment_Success_Rate-100%25-0070F3?style=for-the-badge&logo=shield&logoColor=white)](https://ted-x-auc.vercel.app)
 [![Delivery Failures](https://img.shields.io/badge/Ticket_Drop_Rate-0%25_(Automated)-FF9900?style=for-the-badge&logo=checkmarx&logoColor=white)](https://ted-x-auc.vercel.app)
+[![CI Build](https://img.shields.io/github/actions/workflow/status/Nikhil-Vzo/TedX_Auc/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=CI)](https://github.com/Nikhil-Vzo/TedX_Auc/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 <br />
 
