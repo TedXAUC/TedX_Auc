@@ -9,7 +9,7 @@ Featuring real-time auditorium seat reservations, cryptographic payment reconcil
 
 [![Live Platform](https://img.shields.io/badge/Live_Site-tedxamity.com-E62B1E?style=for-the-badge&logo=vercel&logoColor=white)](https://ted-x-auc.vercel.app)
 [![Volume Processed](https://img.shields.io/badge/Volume_Processed-₹40%2C000%2B-00C853?style=for-the-badge&logo=cashapp&logoColor=white)](https://ted-x-auc.vercel.app)
-[![Payment Reliability](https://img.shields.io/badge/Payment_Success_Rate-100%25-0070F3?style=for-the-badge&logo=shield&logoColor=white)](https://ted-x-auc.vercel.app)
+[![Payment Reliability](https://img.shields.io/badge/Payment_Success_Rate-99%25-0070F3?style=for-the-badge&logo=shield&logoColor=white)](https://ted-x-auc.vercel.app)
 [![Delivery Failures](https://img.shields.io/badge/Ticket_Drop_Rate-0%25_(Automated)-FF9900?style=for-the-badge&logo=checkmarx&logoColor=white)](https://ted-x-auc.vercel.app)
 [![CI Build](https://img.shields.io/github/actions/workflow/status/Nikhil-Vzo/TedX_Auc/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=CI)](https://github.com/Nikhil-Vzo/TedX_Auc/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
@@ -165,61 +165,6 @@ Client-side payment callbacks cannot be trusted for ticket generation.
 - **Row Level Security (RLS)**: Public client access to `bookings` tables is gated; write access is restricted to verified backend service execution.
 
 ---
-
-## 💻 Running Locally
-
-### 1. Prerequisites
-- **Node.js**: v18.0.0 or higher
-- **npm** or **bun**
-- **Supabase Account & CLI** (optional for local edge functions)
-
-### 2. Clone & Install Frontend
-```bash
-git clone https://github.com/Nikhil-Vzo/TedX_Auc.git
-cd TedX_Auc
-
-# Install frontend dependencies
-npm install
-
-# Start Vite development server
-npm run dev
-```
-
-### 3. Configure Frontend Environment Variables
-Create `.env` in the root directory:
-```env
-VITE_SUPABASE_URL=https://your-supabase-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
-VITE_API_BASE_URL=http://localhost:3001
-```
-
-### 4. Start Payment Backend
-```bash
-cd server
-npm install
-
-# Start Express server
-npm start
-```
-
-Configure `server/.env`:
-```env
-PORT=3001
-RAZORPAY_KEY_ID=your_razorpay_key_id
-RAZORPAY_KEY_SECRET=your_razorpay_key_secret
-RAZORPAY_WEBHOOK_SECRET=your_razorpay_webhook_secret
-SUPABASE_URL=https://your-supabase-project.supabase.co
-SUPABASE_SERVICE_KEY=your_supabase_service_role_key
-EMAIL_WEBHOOK_SECRET=your_edge_function_secret
-```
-
-### 5. Deploy Edge Function (Optional)
-```bash
-supabase functions deploy send-booking-email-secure --no-verify-jwt
-```
-
----
-
 ## 👥 Credits & Ownership
 
 **Built for TEDx Amity University Chhattisgarh (AUC)**  
@@ -229,8 +174,8 @@ Organized at Amity University Raipur under official license from TED.
 
 <div align="center">
   
-**Engineered by Nikhil Yadav**  
-Founder of [OthrHalff](https://www.othrhalff.in/) · [Portfolio](https://portfolio-alpha-ebon-0d63biy00d.vercel.app/) · [GitHub](https://github.com/Nikhil-Vzo)
+**Engineered by Nikhil Yadav and Avneesh Kumar Jha**  
+ [OthrHalff](https://www.othrhalff.in/) · [Portfolio](https://portfolio-alpha-ebon-0d63biy00d.vercel.app/) · [GitHub](https://github.com/Nikhil-Vzo)
 
 <p align="center">
   <sub>This independent TEDx event is operated under license from TED.</sub>
